@@ -1,0 +1,32 @@
+[project]
+name = "gravitic-aphelion"
+version = "0.1.0"
+description = "Dual-Driven Intelligent Strategy System (Fundamental & Technical Analysis)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "duckduckgo-search>=8.1.1",
+    "fastapi>=0.122.0",
+    "langchain>=1.0.0",
+    "langchain-community>=0.4.1",
+    "langchain-google-genai>=3.2.0",
+    "langchain-openai>=1.1.0",
+    "langgraph>=1.0.0",
+    "plotly>=6.5.0",
+    "pydantic>=2.12.4",
+    "python-dotenv>=1.2.1",
+    "requests>=2.32.5",
+    "streamlit>=1.51.0",
+    "uvicorn>=0.38.0",
+    "yfinance>=0.2.66",
+    
+    # === 整合技術分析新增依賴項 (QuantAgent) ===
+    "pandas>=2.0.0",
+    "ta-lib>=0.4.0", # 核心技術指標計算庫
+    # ============================================
+]
+
+[dependency-groups]
+dev = [
+    "langgraph-cli[inmem]>=0.4.7",
+]
